@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'MonseDescargada';
+    src: url('../fonts/Monserrat-Regular.ttf');
+
+}
+
+/* variables*/
+:root {
+    --color_principal: #004b87;
+    --color_secundario: #00a859;
+    --color_oscuro: #2b2b2b;
+    --color_claro: #ffffff;
+    --color_fondo: #f4f7f6;
+    --color_border: #e0e0e0;
+    --fuente_titulos: 'monserrat', sans-serif;
+    --fuente_cuerpo: 'opensansdescargada', Arial. Sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color_fondo);
+    color: var(--color_oscuro);
+    line-height: 1.6;
+    font-family: var(--fuente_cuerpo);
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente_titulos);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fuente_titulos);
+}
+
+header {
+    background-color: var(--color_claro);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+#logo h1 {
+    color: var(--color_principal);
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: var(--color_principal);
+}
+
+.btn_destacado,
+.btn_accion {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.btn_destacado {
+    background-color: var(--color_principal);
+    color: var(--color_claro);
+}
+.btn_accion {
+    background-color: var(--color_secundario);
+    color: var(--color_claro);
+}
+.btn_accion:hover {
+    background-color: var(--color_principal);
+    color: var(--color_claro);
+}
+/*HERO*/
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+
+.hero_contenido,
+.hero_imagen {
+    flex: 1 1 300px;
+    /*crecer encoger tamBase*/
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero_contenido h2 {
+    font-size: 2.4rem;
+    color: var(--color_principal);
+    line-height: 1, 2;
+}
+
+.hero_contenido p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*grid de cursos*/
+.catalogo {
+    padding: 40px 0;
+}
+
+.catalogo h2 {
+    text-align: center;
+    color: var(--color_principal);
+}
+
+.grid_cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta_curso {
+    flex: 1 1 280px;
+    background-color: var(--color_claro);
+    border: 1px solid var(--color_border);
+    border-radius: 8px;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    /*aqui efecto*/
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    padding: 15px;
+}
+
+.tarjeta_curso img {
+    border-radius: 8px;
+}
+
+.tarjeta_curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+}
+.tarjeta_curso img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.info_curso {
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_curso h3 {
+    font-size: 1.3rem;
+    color: var(--color_principal);
+}
+
+.info_curso p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    color: var(--color_oscuro);
+}
+
+.nivel{
+    background-color: var(--color_fondo);
+    font-weight: 700;
+    color: var(--color_principal);
+    font-family: var(--fuente_titulos);
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin: 5px;
+}
+.niveles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/*footer*/
+footer {
+    background-color: var(--color_principal);
+    color: var(--color_claro);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.formulario_contenido {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(225, 225, 225);
+    padding: 20px;
+    border-radius: 20px;
+}
+.formulario {
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: var(--color_claro);
+    align-items: center;
+}
+.formulario h2 {
+    text-align: center;
+    color: var(--color_principal);
+    margin-bottom: 20px;
+}
+.formulario_campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.formulario_inscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.formulario_inscripcion label {
+    font-weight: 700;
+    color: var(--color_principal);
+    margin-bottom: 5px;
+    
+}
+
+.formulario_inscripcion input,
+.formulario_inscripcion select {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid var(--color_border);
+    font-size: 1rem;
+    max-width: auto;
+    margin-bottom: 30px;
+}
+
+button[type="submit"] {
+    background-color: var(--color_secundario);
+    color: var(--color_claro);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+.mentoria_contenido h2,
+.mentoria_reglas h3 {
+    align-items: center;
+    color: var(--color_principal);
+    margin-bottom: 15px;
+    background-color: var(--color_secundario);
+    max-width: 25%;
+    text-align: center;
+    border-radius: 15px;
+}
+.mentoria_contenido p{
+    margin-bottom: 15px;
+    color: var(--color_oscuro);
+    text-align: justify;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.mentoria_reglas ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--color_oscuro);
+}
+.mentoria_reglas li {
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 100%;
+}
+.mentoria {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.mentoria_contenido,
+.mentoria_reglas,
+.mentoria_video {
+    padding: 20px;
+    background-color: var(--color_fondo);
+    border-radius: 8px;
+}
+
